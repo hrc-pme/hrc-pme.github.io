@@ -1,0 +1,575 @@
+/*@import url('fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');*/
+
+a {
+  color: #0099cc; /*#0099cc; */ /*#14A098;*/ /*#0099cc;*/
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f18800; /* #f18800; */
+  text-decoration: none;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif; */
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+strong {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 15px;
+}
+
+heading {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif; */
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 24px;
+}
+
+papertitle {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif; */
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 15px;
+  font-weight: 700
+}
+
+profile-name {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif; */
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 19px;
+  font-weight: 700
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 0px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+name {
+  /*font-family: 'Libre Baskerville', serif;*/
+  /*font-family: 'Poppins', sans-serif; */
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  font-size: 34px;
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: white;
+  padding: 10px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: left;
+  /*color: #0099cc;*/
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  /*line-height: 25px;*/
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: white;
+  color: #f18800;
+}
+
+/* Style the active/current link*/
+/*.header a.active {
+  background-color: white;
+  color: #0099cc;
+}*/
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #0099cc;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+
+a.button-paper {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #0099cc;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+a.button-video {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+a.button-code {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #383838;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+a.button-website {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #8064A2;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+a.button-blog {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #ed8e00;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+a.button-talk {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    border: none;
+    background-color: #9BBB59;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    /*font-family:'Poppins',sans-serif;*/
+    /*font-family: 'Open Sans', sans-serif;*/
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    /*font-family: 'Lora', serif;*/
+    /*border-padding:10px;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 8%/16%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+
+a.button-profile {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    border: none;
+    background-color: black; /* #ed8e00; */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top:1px;
+    padding-bottom:1px;
+    border-radius: 18%/18%;
+    margin:0.3e, 0.3em 0.3em 0.3em;
+}
+
+
+
+button.button1{
+  background-color:#FFFFFF;
+  border:none;
+  color: #0099cc;
+  text-decoration:none;
+  /*font-family:'Poppins',sans-serif;*/
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  /*font-family: 'Lora', serif;*/
+  /*padding-left:2px;*/
+  /*padding-left:0.2em 0.35em;*/
+  margin:0 0.3em 0.3em 0;
+}
+button.button1:hover{
+  color:#f18800;
+  /*background-color:#0099cc;  */
+  /*padding:0.2em 0.35em;*/
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.5em;
+  cursor: pointer; 
+}
+
+/* Features */
+
+.features {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 0 2em -3em;
+  width: calc(100% + 3em);
+}
+
+.features article {
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0 0 3em 3em;
+  position: relative;
+  width: calc(50% - 3em);
+}
+
+.features article:nth-child(2n - 1) {
+  margin-right: 1.5em;
+}
+
+.features article:nth-child(2n) {
+  margin-left: 1.5em;
+}
+
+.features article:nth-last-child(1), .features article:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.features article .icon {
+/*  -moz-flex-grow: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-grow: 0;
+  flex-grow: 0;
+  -moz-flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
+  flex-shrink: 0;*/
+  display: block;
+  height: 10em;
+  line-height: 10em;
+  margin: 0 2em 0 0;
+  text-align: center;
+  width: 10em;
+}
+
+.features article .icon:before {
+  color: black;
+  font-size: 2.75rem;
+  position: relative;
+  top: 0.05em;
+}
+
+/*.features article .icon:after {
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-radius: 0.25rem;
+  border: solid 2px rgba(210, 215, 217, 0.75);
+  content: '';
+  display: block;
+  height: 7em;
+  left: 50%;
+  margin: -3.5em 0 0 -3.5em;
+  position: absolute;
+  top: 50%;
+  width: 7em;
+}
+*/
+.features article .content {
+  -moz-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-grow: 1;
+  flex-grow: 1;
+  -moz-flex-shrink: 1;
+  -webkit-flex-shrink: 1;
+  -ms-flex-shrink: 1;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.features article .content > :last-child {
+  margin-bottom: 0;
+}
+
+/*@media screen and (max-width: 980px) {
+
+  .features {
+    margin: 0 0 2em 0;
+    width: 100%;
+  }
+
+    .features article {
+      margin: 0 0 3em 0;
+      width: 100%;
+    }
+
+      .features article:nth-child(2n - 1) {
+        margin-right: 0;
+      }
+
+      .features article:nth-child(2n) {
+        margin-left: 0;
+      }
+
+      .features article:nth-last-child(1), .features article:nth-last-child(2) {
+        margin-bottom: 3em;
+      }
+
+      .features article:last-child {
+        margin-bottom: 0;
+      }
+
+      .features article .icon {
+        height: 8em;
+        line-height: 8em;
+        width: 8em;
+      }
+
+        .features article .icon:before {
+          font-size: 2.25rem;
+        }
+
+        .features article .icon:after {
+          height: 6em;
+          margin: -3em 0 0 -3em;
+          width: 6em;
+        }
+
+}*/
+
+/*@media screen and (max-width: 480px) {
+
+  .features article {
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -moz-align-items: -moz-flex-start;
+    -webkit-align-items: -webkit-flex-start;
+    -ms-align-items: -ms-flex-start;
+    align-items: flex-start;
+  }
+
+    .features article .icon {
+      height: 6em;
+      line-height: 6em;
+      margin: 0 0 1.5em 0;
+      width: 6em;
+    }
+
+      .features article .icon:before {
+        font-size: 1.5rem;
+      }
+
+      .features article .icon:after {
+        height: 4em;
+        margin: -2em 0 0 -2em;
+        width: 4em;
+      }
+
+}*/
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+  .features article .icon:before {
+    font-size: 1.25rem;
+  }
+}
