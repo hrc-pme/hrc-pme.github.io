@@ -1,0 +1,26 @@
+{
+  "navigation": [
+    {"label": "People", "href": "pages/people.html"},
+    {"label": "Research", "href": "pages/research.html"},
+    {"label": "News", "href": "pages/news.html"},
+    {"label": "Publications", "href": "pages/publications.html"},
+    {"label": "Join", "href": "pages/join.html"}
+  ],
+  "site": {
+    "title": "Human-Robot Cooperation Lab",
+    "logo": "assets/images/general/hrclab.png",
+    "favicon": "assets/images/general/logo.png",
+    "github": "https://github.com/hrc-pme"
+  },
+  "lab": {
+    "name": "Intelligent Human-Robot Partnership Lab",
+    "description": "The objective of the Intelegent Human-Robot Parnership Lab is to advance the understanding and development of autonomous, intelligent robots for both mobility and manipulation, as well as intuitive VR interfaces that enable human operators to function as supervisors. Our lab's expertise encompasses robotics, robot learning, and human-robot interaction. We focus on field robotics, with application domains including assistive robot manipulators, robotic assistants for individuals with disabilities, and search and rescue missions.",
+    "location": {
+      "address": "National Tsing Hua University Engineering Building I",
+      "mapLink": "https://maps.app.goo.gl/QwNCmwgjCJtQcbtZ6",
+      "lab": "Room-631",
+      "office": "Room-617"
+    },
+    "researchDescription": "The Human-Robot Cooperation Lab is dedicated to advancing autonomous robotics with a focus on mobility, manipulation, and VR-based human supervision interfaces. Our research aims to enhance intelligent robot capabilities in complex, real-world scenarios. The lab's areas of expertise include robotics, robot learning, and human-robot interaction, with particular applications in healthcare, collaborative assistance, and precision tasks. Our projects address patient care through assistive manipulators, collaborative nurse support for hospital logistics, and dexterous operations for intricate handling tasks. By leveraging VR interfaces, we enable human supervisors to intuitively guide robots, facilitating safer, more effective human-robot partnerships in assistive and field robotics."
+  }
+}

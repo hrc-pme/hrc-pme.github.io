@@ -1,0 +1,129 @@
+{
+  "director": [
+    {
+      "name": "Ching-I Huang",
+      "title": "Assistant Professor",
+      "affiliation": "Department of Power Mechanical Engineering, National Tsing Hua University",
+      "image": "assets/images/people/chingi.png",
+      "links": {
+        "homepage": "https://cihuang123.github.io/",
+        "scholar": "https://scholar.google.com/citations?hl=en&user=PQfRXVYAAAAJ",
+        "linkedin": "https://www.linkedin.com/in/ching-i-h-6696a9220/",
+        "email": "cihuang@gapp.nthu.edu.tw"
+      }
+    }
+  ],
+  "phdStudents": [
+    {
+      "name": "Lester Liou",
+      "title": "PhD Student",
+      "image": "assets/images/people/Lester-liou.png",
+      "links": {
+        "homepage": "https://lesterliou.github.io/",
+        "email": "lesterliou@gmail.com"
+      }
+    }
+  ],
+  "mastersStudents": [
+    {
+      "name": "Ming-Kun Chin",
+      "title": "Masters Student",
+      "image": "assets/images/people/Ming-Kun.png",
+      "links": {
+        "homepage": "https://ken900308.github.io/myweb/",
+        "email": "mk112033540@gapp.nthu.edu.tw"
+      }
+    },
+    {
+      "name": "Tsun-Chuan Wang",
+      "title": "Masters Student",
+      "image": "assets/images/people/Tsun-Chuan.png",
+      "links": {
+        "homepage": "https://tsun-chuan123.github.io/cv/",
+        "email": "nthu113033541@gapp.nthu.edu.tw"
+      }
+    },
+    {
+      "name": "Xin-Chun Zhang",
+      "title": "Masters Student",
+      "image": "assets/images/people/Xin-Chun.jpg",
+      "imageStyle": "height:120px;object-fit:cover",
+      "links": {
+        "homepage": "https://xin-chun-1122.github.io/",
+        "email": "shuan1122@gapp.nthu.edu.tw"
+      }
+    },
+    {
+      "name": "Hsing-Yu Huang",
+      "title": "Masters Student",
+      "image": "assets/images/people/Hsing-Yu.jpg",
+      "links": {
+        "homepage": "https://pomelo925.github.io/",
+        "email": "yoseph.huang@gmail.com"
+      }
+    },
+    {
+      "name": "Kuang-Yu Hsi",
+      "title": "Masters Student",
+      "image": "assets/images/people/Kuang-Yu.png",
+      "imageStyle": "height:120px;object-fit:cover",
+      "links": {
+        "homepage": "https://sunnyxi7.github.io/",
+        "email": "xiguangyou7@gmail.com"
+      }
+    },
+    {
+      "name": "Hao-Zhe Cheng",
+      "title": "Masters Student",
+      "image": "assets/images/people/Hao-Zhe.jpg",
+      "links": {
+        "homepage": "https://haozhe-ch.github.io/myresume/",
+        "email": "haoze.ch@gmail.com"
+      }
+    },
+    {
+      "name": "Chun-Jen Chen",
+      "title": "Masters Student",
+      "image": "assets/images/people/Chun-Jen.jpg",
+      "imageStyle": "height:120px;object-fit:cover",
+      "links": {
+        "homepage": "https://jerry12221.github.io/Mywebsite/",
+        "email": "s114033639@m114.nthu.edu.tw"
+      }
+    }
+  ],
+  "collaborators": [
+    {
+      "name": "Chi-Jui Lu",
+      "title": "Research assistants",
+      "image": "assets/images/people/chi-jui.jpg",
+      "imageStyle": "height:120px;object-fit:cover",
+      "links": {
+        "homepage": "https://rayray0216.github.io/",
+        "email": "raymondcjlu920216@gapp.nthu.edu.tw"
+      }
+    }
+  ],
+  "robots": [
+    {
+      "name": "LoCoBot",
+      "manufacturer": "Trossen Robotics",
+      "image": "assets/images/people/locobot.png"
+    },
+    {
+      "name": "Stretch 3",
+      "manufacturer": "Hello Robot",
+      "image": "assets/images/people/stretch3.png"
+    },
+    {
+      "name": "Koch Robot Arm v1.1",
+      "manufacturer": "Open Source by Jess Moss",
+      "image": "assets/images/people/koch_robot_arm_v1.png"
+    },
+    {
+      "name": "ViperX",
+      "manufacturer": "Trossen Robotics",
+      "image": "assets/images/people/viperx.png"
+    }
+  ]
+}

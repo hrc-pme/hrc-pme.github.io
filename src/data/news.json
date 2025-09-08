@@ -1,0 +1,50 @@
+{
+  "awards": [
+    {
+      "id": "military_award_2025",
+      "date": "2025-08-26",
+      "title": "Poster Award at the 21st Military Operations Research and Modeling & Simulation Forum",
+      "description": "HRC Lab received a poster award at the 21st Military Operations Research and Modeling & Simulation Forum.",
+      "image": "assets/images/news/20250826_military_award.jpg"
+    },
+    {
+      "id": "golden_silicon_2025",
+      "date": "2025-08-21",
+      "title": "First Place Award at the 25th Golden Silicon Awards",
+      "description": "Three HRC Lab members received the first place award (優勝獎) at the 25th Golden Silicon Awards with their masterpiece \"Application of Multimodal Language Models in Food Consultation and Edge Computing Implementation\" (模態語言模型在食品諮詢中的應用與邊緣計算實現).",
+      "image": "assets/images/news/20250821_25th_golden_silicon_award.png"
+    }
+  ],
+  "events": [
+    {
+      "id": "military_demo_2025",
+      "date": "2025-08-26",
+      "title": "Demonstration at the 21st Military Operations Research and Modeling & Simulation Forum",
+      "description": "HRC Lab demonstrated immersive remote operation system robotic technology at the forum co-hosted by the Ministry of National Defense Integration Assessment Division and National Tsing Hua University Defense Technology Research Center.",
+      "image": "assets/images/news/20250826_military_demo.jpg"
+    },
+    {
+      "id": "yonsei_visit_2025",
+      "date": "2025-01-17",
+      "title": "Visitors from Yonsei University",
+      "description": "A group of faculty members from Yonsei University visited the HRC Lab to learn about ongoing research and participate in hands-on demonstrations, including the integration of the Stretch 3 robot with VR teleoperation systems.",
+      "image": "assets/images/news/20250117_yonsei_university_demo.jpg"
+    },
+    {
+      "id": "toronto_visit_2024",
+      "date": "2024-11-04",
+      "title": "Visitors from the University of Toronto",
+      "description": "Three visitors from the University of Toronto visit the HRC Lab to experience an interactive demonstration of our VR teleoperation robot.",
+      "image": "assets/images/news/20241104_UniversityofToronto_demo.jpg"
+    }
+  ],
+  "research": [
+    {
+      "id": "iros2024",
+      "date": "2024-10",
+      "title": "1 Paper presented in IROS2024",
+      "description": "An Evaluation Framework of Human-Robot Teaming for Navigation Among Movable Obstacles via Virtual Reality-Based Interactions",
+      "image": "assets/images/news/iros2024.png"
+    }
+  ]
+}
