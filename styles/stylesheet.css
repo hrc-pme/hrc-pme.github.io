@@ -126,7 +126,9 @@ span.highlight {
   text-decoration: none;
   font-size: 16px;
   /*line-height: 25px;*/
-  border-radius: 4px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 2px;
 }
 
 /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
@@ -137,8 +139,16 @@ span.highlight {
 
 /* Change the background color on mouse-over */
 .header a:hover {
-  background-color: white;
+  background-color: #f5f5f5;
   color: #f18800;
+  transform: translateY(-1px);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: #e8f4fd;
+  color: #0099cc;
+  font-weight: 500;
 }
 
 /* Style the active/current link*/
@@ -176,7 +186,7 @@ a.button {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 
@@ -203,7 +213,7 @@ a.button-paper {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 a.button-video {
@@ -229,7 +239,7 @@ a.button-video {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 a.button-code {
@@ -255,7 +265,7 @@ a.button-code {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 a.button-website {
@@ -281,7 +291,7 @@ a.button-website {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 a.button-blog {
@@ -307,7 +317,7 @@ a.button-blog {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 a.button-talk {
@@ -333,7 +343,7 @@ a.button-talk {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 8%/16%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 
@@ -355,7 +365,7 @@ a.button-profile {
     padding-top:1px;
     padding-bottom:1px;
     border-radius: 18%/18%;
-    margin:0.3e, 0.3em 0.3em 0.3em;
+    margin: 0.3em;
 }
 
 
@@ -371,18 +381,16 @@ button.button1{
   /*font-family: 'Lora', serif;*/
   /*padding-left:2px;*/
   /*padding-left:0.2em 0.35em;*/
-  margin:0 0.3em 0.3em 0;
+  margin: 0 0.3em 0.3em 0;
 }
 button.button1:hover{
-  color:#f18800;
+  color: #f18800;
   /*background-color:#0099cc;  */
   /*padding:0.2em 0.35em;*/
-  margin:0 0.3em 0.3em 0;
-  border-radius:0.5em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.5em;
   cursor: pointer; 
-}
-
-/* Features */
+}/* Features */
 
 .features {
   display: -moz-flex;
@@ -662,11 +670,23 @@ button.button1:hover{
 }
 
 [data-theme="dark"] .header {
-  background-color: #2d2d2d;
+  background-color: #1a1a1a;
 }
 
 [data-theme="dark"] .header a {
   color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .header a:hover {
+  background-color: #2a2a2a !important;
+  color: #ffa726 !important;
+  transform: translateY(-1px);
+}
+
+[data-theme="dark"] .header a.active {
+  background-color: #1f3a57 !important;
+  color: #64b5f6 !important;
+  font-weight: 500;
 }
 
 [data-theme="dark"] .logo {

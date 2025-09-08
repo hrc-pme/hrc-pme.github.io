@@ -43,14 +43,21 @@ class SiteGenerator:
             result = result.replace(placeholder, str(value) if value is not None else '')
         return result
     
-    def generate_navigation(self, is_root=True):
+    def generate_navigation(self, is_root=True, current_page=None):
         nav_items = []
         for item in self.site_data['navigation']:
             href = item['href'] if is_root else item['href'].replace('pages/', '')
-            nav_items.append(f'<a href="{href}" style="font-size: 23px; color:black">{item["label"]}</a>')
+            
+            # Determine if this is the current page
+            page_name = item['href'].split('/')[-1] if '/' in item['href'] else item['href']
+            is_current = (current_page == page_name) or (current_page == 'index.html' and page_name == 'index.html')
+            
+            # Add active class if this is the current page
+            class_attr = ' class="active"' if is_current else ''
+            nav_items.append(f'<a href="{href}"{class_attr} style="font-size: 23px; color:black">{item["label"]}</a>')
         return '\n    '.join(nav_items)
     
-    def generate_header(self, is_root=True):
+    def generate_header(self, is_root=True, current_page=None):
         header_template = self.load_component('header.html')
         
         # Adjust asset paths based on whether this is a root page or subpage
@@ -60,7 +67,7 @@ class SiteGenerator:
         return self.replace_placeholders(header_template, {
             'HOME_LINK': home_link,
             'LOGO_PATH': logo_path,
-            'NAVIGATION_LINKS': self.generate_navigation(is_root),
+            'NAVIGATION_LINKS': self.generate_navigation(is_root, current_page),
             'GITHUB_LINK': self.site_data['site']['github']
         })
     
@@ -146,7 +153,7 @@ class SiteGenerator:
             'LINKS': '\n                '.join(links)
         })
     
-    def generate_base_page(self, page_title, author, main_content, is_root=True):
+    def generate_base_page(self, page_title, author, main_content, is_root=True, current_page=None):
         base_template = self.load_template('base.html')
         
         # Adjust paths based on whether this is a root page or subpage
@@ -162,7 +169,7 @@ class SiteGenerator:
             'FAVICON_PATH': favicon_path,
             'LIGHTBOX_SCRIPT_PATH': lightbox_script_path,
             'THEME_SCRIPT_PATH': theme_script_path,
-            'HEADER': self.generate_header(is_root),
+            'HEADER': self.generate_header(is_root, current_page),
             'MAIN_CONTENT': main_content,
             'FOOTER': self.generate_footer()
         })
@@ -185,7 +192,7 @@ class SiteGenerator:
         </tbody>
       </table>"""
         
-        return self.generate_base_page(self.site_data['site']['title'], 'Ching-I Huang', content)
+        return self.generate_base_page(self.site_data['site']['title'], 'Ching-I Huang', content, True, 'index.html')
     
     def generate_people_page(self):
         content = ''
@@ -227,7 +234,7 @@ class SiteGenerator:
         </tbody>
       </table>"""
         
-        return self.generate_base_page('People', 'Welly', content, False)
+        return self.generate_base_page('People', 'Welly', content, False, 'people.html')
     
     def generate_news_page(self):
         content = ''
@@ -247,7 +254,7 @@ class SiteGenerator:
         for item in self.news_data['research']:
             content += self.generate_news_item(item, False)
         
-        return self.generate_base_page('Publications', 'Andrea Bajcsy', content, False)
+        return self.generate_base_page('News', 'Andrea Bajcsy', content, False, 'news.html')
     
     def generate_research_page(self):
         content = f"""
@@ -261,7 +268,7 @@ class SiteGenerator:
         </tbody>
       </table>"""
         
-        return self.generate_base_page('Research', 'Andrea Bajcsy', content, False)
+        return self.generate_base_page('Research', 'Andrea Bajcsy', content, False, 'research.html')
     
     def generate_publications_page(self):
         content = ''
@@ -271,7 +278,7 @@ class SiteGenerator:
         for publication in self.publications_data['publications']:
             content += self.generate_publication_item(publication, False)
         
-        return self.generate_base_page('Publications', 'Andrea Bajcsy', content, False)
+        return self.generate_base_page('Publications', 'Andrea Bajcsy', content, False, 'publications.html')
     
     def generate(self):
         try:
