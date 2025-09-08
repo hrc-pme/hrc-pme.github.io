@@ -22,6 +22,7 @@ class SiteGenerator:
         self.site_data = self.load_json('site.json')
         self.people_data = self.load_json('people.json')
         self.news_data = self.load_json('news.json')
+        self.publications_data = self.load_json('publications.json')
     
     def load_json(self, filename):
         with open(self.data_dir / filename, 'r', encoding='utf-8') as f:
@@ -123,6 +124,28 @@ class SiteGenerator:
             'SECTION_TITLE': title
         })
     
+    def generate_publication_item(self, publication, is_root=True):
+        template = self.load_component('publication-item.html')
+        image_path = publication['image'] if is_root else f"../{publication['image']}"
+        
+        # Generate publication links
+        links = []
+        if publication.get('links', {}).get('paper'):
+            links.append(f'<a class="button-paper" href="{publication["links"]["paper"]}"><i class="fa fa-file-text" aria-hidden="true"></i> paper</a>')
+        if publication.get('links', {}).get('video'):
+            links.append(f'<a class="button-video" href="{publication["links"]["video"]}"><i class="fa fa-video-camera" aria-hidden="true"></i> video</a>')
+        if publication.get('links', {}).get('code'):
+            links.append(f'<a class="button-code" href="{publication["links"]["code"]}"><i class="fa fa-code" aria-hidden="true"></i> code</a>')
+        
+        return self.replace_placeholders(template, {
+            'IMAGE_PATH': image_path,
+            'TITLE': publication['title'],
+            'AUTHORS': publication['authors'],
+            'VENUE': publication['venue'],
+            'YEAR': publication['year'],
+            'LINKS': '\n                '.join(links)
+        })
+    
     def generate_base_page(self, page_title, author, main_content, is_root=True):
         base_template = self.load_template('base.html')
         
@@ -130,6 +153,7 @@ class SiteGenerator:
         stylesheet_path = 'styles/stylesheet.css' if is_root else '../styles/stylesheet.css'
         favicon_path = self.site_data['site']['favicon'] if is_root else f"../{self.site_data['site']['favicon']}"
         lightbox_script_path = 'src/scripts/lightbox.js' if is_root else '../src/scripts/lightbox.js'
+        theme_script_path = 'src/scripts/theme-toggle.js' if is_root else '../src/scripts/theme-toggle.js'
         
         return self.replace_placeholders(base_template, {
             'PAGE_TITLE': page_title,
@@ -137,6 +161,7 @@ class SiteGenerator:
             'STYLESHEET_PATH': stylesheet_path,
             'FAVICON_PATH': favicon_path,
             'LIGHTBOX_SCRIPT_PATH': lightbox_script_path,
+            'THEME_SCRIPT_PATH': theme_script_path,
             'HEADER': self.generate_header(is_root),
             'MAIN_CONTENT': main_content,
             'FOOTER': self.generate_footer()
@@ -238,6 +263,16 @@ class SiteGenerator:
         
         return self.generate_base_page('Research', 'Andrea Bajcsy', content, False)
     
+    def generate_publications_page(self):
+        content = ''
+        
+        # Publications section
+        content += self.generate_section_header('Publications')
+        for publication in self.publications_data['publications']:
+            content += self.generate_publication_item(publication, False)
+        
+        return self.generate_base_page('Publications', 'Andrea Bajcsy', content, False)
+    
     def generate(self):
         try:
             # Generate new pages
@@ -248,7 +283,8 @@ class SiteGenerator:
             sub_pages = {
                 'people.html': self.generate_people_page(),
                 'news.html': self.generate_news_page(),
-                'research.html': self.generate_research_page()
+                'research.html': self.generate_research_page(),
+                'publications.html': self.generate_publications_page()
             }
             
             # Write root pages

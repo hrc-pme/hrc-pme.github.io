@@ -592,15 +592,17 @@ button.button1:hover{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 85vw;
+  max-height: 85vh;
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .lightbox-image {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
   border-radius: 8px;
 }
@@ -629,4 +631,96 @@ button.button1:hover{
 
 .clickable-image:hover {
   opacity: 0.8;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-right: 15px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+[data-theme="dark"] {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] body {
+  background-color: #1a1a1a;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .header {
+  background-color: #2d2d2d;
+}
+
+[data-theme="dark"] .header a {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .logo {
+  color: #e0e0e0 !important;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .theme-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] table {
+  background-color: #1a1a1a;
+}
+
+[data-theme="dark"] td {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] p {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] heading,
+[data-theme="dark"] profile-name,
+[data-theme="dark"] b {
+  color: #ffffff;
+}
+
+[data-theme="dark"] a {
+  color: #4dabf7;
+}
+
+[data-theme="dark"] a:hover {
+  color: #74c0fc;
+}
+
+[data-theme="dark"] .button-profile {
+  background-color: #404040;
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .button-profile:hover {
+  background-color: #505050;
+}
+
+/* Dark mode for lightbox */
+[data-theme="dark"] .lightbox {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+[data-theme="dark"] .lightbox-content {
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
 }

@@ -1,0 +1,14 @@
+{
+  "publications": [
+    {
+      "title": "An Evaluation Framework of Human-Robot Teaming for Navigation Among Movable Obstacles via Virtual Reality-Based Interactions",
+      "authors": "Ching-I Huang; Sun-Fu Chou; Li-Wei Liou; Nathan Alan Moy; Chi-Ruei Wang; Hsueh-Cheng Wang",
+      "venue": "IEEE Robotics and Automation Letters",
+      "year": "2024",
+      "image": "assets/images/publications/vr_navi.jpg",
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/abstract/document/10419887"
+      }
+    }
+  ]
+}
