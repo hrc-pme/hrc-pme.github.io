@@ -129,12 +129,14 @@ class SiteGenerator:
         # Adjust paths based on whether this is a root page or subpage
         stylesheet_path = 'styles/stylesheet.css' if is_root else '../styles/stylesheet.css'
         favicon_path = self.site_data['site']['favicon'] if is_root else f"../{self.site_data['site']['favicon']}"
+        lightbox_script_path = 'src/scripts/lightbox.js' if is_root else '../src/scripts/lightbox.js'
         
         return self.replace_placeholders(base_template, {
             'PAGE_TITLE': page_title,
             'AUTHOR': author,
             'STYLESHEET_PATH': stylesheet_path,
             'FAVICON_PATH': favicon_path,
+            'LIGHTBOX_SCRIPT_PATH': lightbox_script_path,
             'HEADER': self.generate_header(is_root),
             'MAIN_CONTENT': main_content,
             'FOOTER': self.generate_footer()

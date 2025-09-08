@@ -2,11 +2,9 @@
 
 Human-Robot Collaboration Lab website with modular architecture.
 
-## Live Documentation
-
 Visit our live website at: https://hrc-pme.github.io/
 
-## Architecture
+## 1. Architecture
 
 This website follows a modular architecture with a clean directory structure:
 
@@ -48,54 +46,7 @@ This website follows a modular architecture with a clean directory structure:
 └── package.json                # Build configuration
 ```
 
-## Data Structure
-
-### Site Configuration (`src/data/site.json`)
-- **navigation**: Array of navigation menu items (pointing to pages/ subdirectory)
-- **site**: Basic site information (title, logo, favicon, links)
-- **lab**: Lab description, location, and research information
-
-### People Data (`src/data/people.json`)
-- **director**: Lab director information
-- **phdStudents**: PhD students array
-- **mastersStudents**: Masters students array
-- **collaborators**: Collaborators and visiting students
-- **robots**: Lab robots and equipment
-
-### News Data (`src/data/news.json`)
-- **awards**: Awards and recognitions
-- **events**: Events and visits
-- **research**: Research publications and presentations
-
-### Person Object Structure
-```json
-{
-  "name": "Person Name",
-  "title": "Position/Title", 
-  "affiliation": "Optional affiliation",
-  "image": "assets/images/people/image.jpg",
-  "imageStyle": "Optional CSS styles",
-  "links": {
-    "homepage": "URL",
-    "scholar": "Google Scholar URL",
-    "linkedin": "LinkedIn URL", 
-    "email": "email@domain.com"
-  }
-}
-```
-
-### News Item Structure
-```json
-{
-  "id": "unique_identifier",
-  "date": "YYYY-MM-DD",
-  "title": "Item Title",
-  "description": "Detailed description",
-  "image": "assets/images/news/image.jpg"
-}
-```
-
-## Build System
+## 2. Build System
 
 ### Prerequisites
 - Python 3 (for build script and local development server)
@@ -117,26 +68,7 @@ python3 -m http.server 8000
 3. **Build Site**: Run `python3 src/scripts/generate.py` to generate HTML files
 4. **Test Locally**: Use `python3 -m http.server 8000` to test changes
 
-## Key Features
-
-- **Clean Structure**: Only index.html at root, all other pages in pages/ subdirectory
-- **Modular Components**: Reusable HTML components for consistent styling
-- **Data-Driven**: Content separated from presentation via JSON files
-- **Relative Paths**: Smart path handling for root vs. subpage navigation
-- **Asset Organization**: Structured asset directory with categories
-- **Template System**: Base templates for consistent page structure
-- **Static Generation**: Fast, deployable static HTML files
-- **Maintainable**: Easy to update content and add new sections
-
-## Directory Benefits
-
-- **Root Clarity**: Only index.html at root level keeps the main directory clean
-- **Organized Pages**: All content pages grouped in pages/ subdirectory
-- **Asset Structure**: Categorized asset organization improves maintainability
-- **Style Separation**: Dedicated styles/ directory for stylesheets
-- **Source Separation**: All source code and data in src/ subdirectory
-
-## Adding New Content
+## 3. Adding New Content
 
 ### Adding a New Person
 1. Add person object to appropriate array in `src/data/people.json`
@@ -152,7 +84,3 @@ python3 -m http.server 8000
 1. Edit components in `src/components/`
 2. Update generator logic in `src/scripts/generate.py` if needed
 3. Run `python3 src/scripts/generate.py` to apply changes
-
-## Development
-
-This is a static website built with HTML, CSS, and Python using a custom build system for maintainability and modularity. The build system handles relative path generation automatically for both root-level and subdirectory pages.
