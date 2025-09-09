@@ -17,6 +17,30 @@ a:hover {
   text-decoration: none !important;
 }
 
+/* Button overrides - must come after general a styles */
+a.button,
+a.button-paper,
+a.button-video,
+a.button-code,
+a.button-website,
+a.button-blog,
+a.button-talk,
+a.button-profile {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.button-paper {
+  background-color: #0099cc !important;
+  color: white !important;
+}
+
+a.button-paper:hover {
+  background-color: #f18800 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+
 body,
 td,
 th,
@@ -214,30 +238,30 @@ a.button {
 
 
 a.button-paper {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-
+    -webkit-appearance: button !important;
+    -moz-appearance: button !important;
+    appearance: button !important;
     text-decoration: none !important;
-    border: none;
+    border: none !important;
     background-color: #0099cc !important;
     color: white !important;
-    text-align: center;
-    display: inline-block;
-    cursor: pointer;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-radius: 8%/16%;
-    margin: 0.3em;
-    font-size: 16px;
-    vertical-align: top;
-    margin-top: -5px;
+    text-align: center !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    border-radius: 8%/16% !important;
+    margin: 0.3em !important;
+    font-size: 16px !important;
+    vertical-align: top !important;
+    margin-top: -5px !important;
 }
 
-a.button-paper:hover {
+a.button-paper:hover,
+a.button-paper:focus {
     background-color: #f18800 !important;
     color: white !important;
     text-decoration: none !important;
@@ -375,25 +399,31 @@ a.button-talk {
 
 
 a.button-profile {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    border: none;
-    background-color: black; /* #ed8e00; */
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-radius: 18%/18%;
-    margin: 0.3em;
-    font-size: 18px;
+    -webkit-appearance: button !important;
+    -moz-appearance: button !important;
+    appearance: button !important;
+    text-decoration: none !important;
+    border: none !important;
+    background-color: black !important;
+    color: white !important;
+    text-align: center !important;
+    display: inline-block !important;
+    cursor: pointer !important;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    border-radius: 18%/18% !important;
+    margin: 0.3em !important;
+    font-size: 18px !important;
+}
+
+a.button-profile:hover,
+a.button-profile:focus {
+    background-color: #333333 !important;
+    color: white !important;
+    text-decoration: none !important;
 }
 
 
@@ -823,23 +853,28 @@ button.button1:hover{
   color: #74c0fc;
 }
 
-[data-theme="dark"] .button-profile {
+[data-theme="dark"] a.button-profile {
   background-color: #404040 !important;
   color: #e0e0e0 !important;
 }
 
-[data-theme="dark"] .button-profile:hover {
+[data-theme="dark"] a.button-profile:hover,
+[data-theme="dark"] a.button-profile:focus {
   background-color: #505050 !important;
+  color: #e0e0e0 !important;
+  text-decoration: none !important;
 }
 
-[data-theme="dark"] .button-paper {
+[data-theme="dark"] a.button-paper {
   background-color: #4dabf7 !important;
   color: white !important;
 }
 
-[data-theme="dark"] .button-paper:hover {
+[data-theme="dark"] a.button-paper:hover,
+[data-theme="dark"] a.button-paper:focus {
   background-color: #74c0fc !important;
   color: white !important;
+  text-decoration: none !important;
 }
 
 /* Dark mode for lightbox */
