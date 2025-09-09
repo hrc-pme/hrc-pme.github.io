@@ -218,25 +218,29 @@ a.button-paper {
     -moz-appearance: button;
     appearance: button;
 
-    text-decoration: none;
+    text-decoration: none !important;
     border: none;
-    background-color: #0099cc;
-    color: white;
+    background-color: #0099cc !important;
+    color: white !important;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    /*font-family:'Poppins',sans-serif;*/
-    /*font-family: 'Open Sans', sans-serif;*/
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    /*font-family: 'Lora', serif;*/
-    /*border-padding:10px;*/
-    padding-left: 5px;
-    padding-right: 5px;
-    padding-top:1px;
-    padding-bottom:1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-radius: 8%/16%;
     margin: 0.3em;
+    font-size: 16px;
+    vertical-align: top;
+    margin-top: -5px;
+}
+
+a.button-paper:hover {
+    background-color: #f18800 !important;
+    color: white !important;
+    text-decoration: none !important;
 }
 
 a.button-video {
@@ -383,12 +387,13 @@ a.button-profile {
     display: inline-block;
     cursor: pointer;
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-    padding-left: 6px;
-    padding-right: 6px;
-    padding-top:1px;
-    padding-bottom:1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
     border-radius: 18%/18%;
     margin: 0.3em;
+    font-size: 18px;
 }
 
 
@@ -819,12 +824,22 @@ button.button1:hover{
 }
 
 [data-theme="dark"] .button-profile {
-  background-color: #404040;
-  color: #e0e0e0;
+  background-color: #404040 !important;
+  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] .button-profile:hover {
-  background-color: #505050;
+  background-color: #505050 !important;
+}
+
+[data-theme="dark"] .button-paper {
+  background-color: #4dabf7 !important;
+  color: white !important;
+}
+
+[data-theme="dark"] .button-paper:hover {
+  background-color: #74c0fc !important;
+  color: white !important;
 }
 
 /* Dark mode for lightbox */
