@@ -1,14 +1,20 @@
 /*@import url('fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');*/
 
+/* Reset and force important styles for GitHub Pages compatibility */
+* {
+  box-sizing: border-box;
+}
+
+/* Ensure consistent link behavior */
 a {
-  color: #0099cc; /*#0099cc; */ /*#14A098;*/ /*#0099cc;*/
-  text-decoration: none;
+  color: #0099cc !important; /*#0099cc; */ /*#14A098;*/ /*#0099cc;*/
+  text-decoration: none !important;
 }
 
 a:focus,
 a:hover {
-  color: #f18800; /* #f18800; */
-  text-decoration: none;
+  color: #f18800 !important; /* #f18800; */
+  text-decoration: none !important;
 }
 
 body,
@@ -128,53 +134,55 @@ span.highlight {
   background-color: white;
   padding: 10px 10px;
   position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Style the header links */
 .header a {
   float: left;
-  /*color: #0099cc;*/
+  color: black !important;
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 16px;
-  /*line-height: 25px;*/
   border-radius: 8px;
   transition: all 0.3s ease;
   margin: 2px;
+  box-sizing: border-box;
 }
 
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+/* Style the logo link */
 .header a.logo {
   font-size: 27px;
   font-weight: bold;
+  color: black !important;
 }
 
 /* Change the background color on mouse-over - Light mode */
 .header a:hover {
-  background-color: #f5f5f5;
-  color: #f18800;
+  background-color: #f5f5f5 !important;
+  color: #0099cc !important;
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
 }
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: #e0e0e0;
-  color: #0099cc;
+  background-color: #e0e0e0 !important;
+  color: #0099cc !important;
   font-weight: 500;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
-
-/* Style the active/current link*/
-/*.header a.active {
-  background-color: white;
-  color: #0099cc;
-}*/
 
 /* Float the link section to the right */
 .header-right {
   float: right;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 
@@ -595,6 +603,39 @@ button.button1:hover{
   .features article .icon:before {
     font-size: 1.25rem;
   }
+  
+  /* Adjust positioning for mobile */
+  .theme-toggle-btn {
+    right: 50px !important;
+  }
+  
+  .github-icon {
+    right: 10px !important;
+  }
+}
+
+/* Additional styles to ensure GitHub Pages compatibility */
+.header * {
+  box-sizing: border-box;
+}
+
+/* Force correct positioning regardless of other styles */
+.theme-toggle-btn,
+.github-icon {
+  position: absolute !important;
+}
+
+/* Ensure proper z-index layering */
+.header {
+  z-index: 100;
+}
+
+.theme-toggle-btn {
+  z-index: 1000 !important;
+}
+
+.github-icon {
+  z-index: 999 !important;
 }
 
 /* Lightbox Styles */
@@ -664,39 +705,53 @@ button.button1:hover{
   padding: 8px;
   border-radius: 50%;
   transition: all 0.3s ease;
-  color: black;
+  color: black !important;
   position: absolute;
   top: 15px;
-  right: 15px;
+  right: 70px;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
 .theme-toggle-btn:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.1) !important;
   transform: scale(1.1);
 }
 
 /* GitHub icon positioning */
 .github-icon {
-  position: absolute;
+  position: absolute !important;
   top: 20px;
-  right: 60px;
+  right: 15px;
   z-index: 999;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+}
+
+.github-icon i {
+  color: black !important;
+  transition: color 0.3s ease;
+}
+
+.github-icon:hover i {
+  color: #0099cc !important;
 }
 
 /* Dark Mode Styles */
 [data-theme="dark"] {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] body {
-  background-color: #1a1a1a;
-  color: #e0e0e0;
+  background-color: #1a1a1a !important;
+  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] .header {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a !important;
 }
 
 [data-theme="dark"] .header a {
@@ -705,7 +760,7 @@ button.button1:hover{
 
 [data-theme="dark"] .header a:hover {
   background-color: #2a2a2a !important;
-  color: #ffa726 !important;
+  color: #74c0fc !important;
   transform: translateY(-1px);
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1) !important;
 }
@@ -722,11 +777,11 @@ button.button1:hover{
 }
 
 [data-theme="dark"] .theme-toggle-btn {
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
 }
 
 [data-theme="dark"] .theme-toggle-btn:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 [data-theme="dark"] .github-icon i {
