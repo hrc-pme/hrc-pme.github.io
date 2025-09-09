@@ -280,6 +280,33 @@ class SiteGenerator:
         
         return self.generate_base_page('Publications', 'Andrea Bajcsy', content, False, 'publications.html')
     
+    def generate_join_page(self):
+        content = f"""
+      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tbody>
+          <tr>
+            <td>
+              <h1><b>Joining the Lab</b></h1>
+              <p>
+                <p style="display:inline;color:#f18800;"><b>We are recruiting highly motivated and talented individuals to join the lab!</b></p> Please follow the instructions on this page before emailing me in order to receive a timely reply. 
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table width="50%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <tbody>
+          <tr>
+            <td>
+              <img src="../assets/images/general/under_construction.jpg" alt="Large Picture" style="width:100%;max-width:900px;">
+            </td>
+          </tr>
+        </tbody>
+      </table>"""
+        
+        return self.generate_base_page('Join', 'Andrea Bajcsy', content, False, 'join.html')
+    
     def generate(self):
         try:
             # Generate new pages
@@ -291,7 +318,8 @@ class SiteGenerator:
                 'people.html': self.generate_people_page(),
                 'news.html': self.generate_news_page(),
                 'research.html': self.generate_research_page(),
-                'publications.html': self.generate_publications_page()
+                'publications.html': self.generate_publications_page(),
+                'join.html': self.generate_join_page()
             }
             
             # Write root pages

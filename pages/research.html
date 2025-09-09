@@ -15,6 +15,14 @@
 
 <!-- Navigation Header Component -->
 <div class="header" style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;padding-bottom:0px">
+  <!-- Theme toggle button positioned at top right -->
+  <button id="theme-toggle" class="theme-toggle-btn" title="切換深色/淺色模式">
+    <i class="fa fa-moon-o" style="font-size:24px;"></i>
+  </button>
+  
+  <!-- GitHub icon positioned next to theme toggle -->
+  <a href="https://github.com/hrc-pme" class="github-icon"><i class="fa fa-github" style="font-size:28px;color:black;"></i></a>
+  
   <a href="../index.html" class="logo" style="color:black;font-size:18px; padding-top:30px">
     <img src="../assets/images/general/hrclab.png" height="80">
   </a>
@@ -24,23 +32,17 @@
     <a href="news.html" style="font-size: 23px; color:black">News</a>
     <a href="publications.html" style="font-size: 23px; color:black">Publications</a>
     <a href="join.html" style="font-size: 23px; color:black">Join</a>
-    <br>
-    <div class="header-right" style="padding-top:0px;">
-      <button id="theme-toggle" class="theme-toggle-btn" title="切換深色/淺色模式">
-        <i class="fa fa-moon-o" style="font-size:24px;"></i>
-      </button>
-      <a href="https://github.com/hrc-pme"><i class="fa fa-github" style="font-size:28px;color:black;"></i></a>
-    </div>
   </div>
 </div>
 
 
 <body>
-  <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          
+  <div class="main-content">
+    <table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <tbody>
+        <tr style="padding:0px">
+          <td style="padding:0px">
+            
       <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
         <tbody>
           <tr>
@@ -50,10 +52,11 @@
           </tr>
         </tbody>
       </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- Footer Component -->
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0" style="padding-top:0px;">
