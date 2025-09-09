@@ -160,7 +160,7 @@ span.highlight {
 
 /* Style the active/current link*/
 .header a.active {
-  background-color: #e8f4fd;
+  background-color: #e0e0e0;
   color: #0099cc;
   font-weight: 500;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
