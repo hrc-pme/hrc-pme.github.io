@@ -1,0 +1,17 @@
+{
+  "name": "hrc-lab-website",
+  "version": "1.0.0",
+  "description": "Human-Robot Collaboration Lab Website",
+  "main": "src/scripts/generate.js",
+  "scripts": {
+    "build": "node src/scripts/generate.js",
+    "dev": "node src/scripts/generate.js && python3 -m http.server 8000",
+    "clean": "echo 'Cleaning generated files...'",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": ["robotics", "research", "lab", "website"],
+  "author": "HRC Lab",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
